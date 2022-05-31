@@ -10,6 +10,7 @@ import { User } from "./user.data";
 
 export class DataService {
     
+    // tells service where to look
     apiurl = 'api/users';
     headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
     httpOptions = {
