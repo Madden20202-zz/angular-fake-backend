@@ -26,4 +26,11 @@ export class DataService {
         console.error(error);
         return throwError(error);
     }
+
+    getUsers(): Observable<User[]> {
+        return this.http.get<User>(this.apiurl).pipe(
+            tap(data => console.log(data)),
+            catchError(this.handleError)
+        );
+    }
 }
