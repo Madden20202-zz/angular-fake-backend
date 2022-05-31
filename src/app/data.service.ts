@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { tap, catchError } from 'rxjs/operators';
 import { User } from "./user.data";
+import { UserData } from "./user-data.service";
 
 @Injectable({
     providedIn: 'root'
@@ -27,8 +28,8 @@ export class DataService {
         return throwError(error);
     }
 
-    getUsers(): Observable<User[]> {
-        return this.http.get<User[]>(this.apiurl).pipe(
+    getUsers(): Observable<UserData[]> {
+        return this.http.get<UserData[]>(this.apiurl).pipe(
             tap(data => console.log(data)),
             catchError(this.handleError)
         );
