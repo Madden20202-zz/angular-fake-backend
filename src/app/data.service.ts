@@ -28,6 +28,8 @@ export class DataService {
         return throwError(error);
     }
 
+    // Data has to be passed the right way
+    // Top to bottom, so UserData to u of users
     getUsers(): Observable<UserData[]> {
         return this.http.get<UserData[]>(this.apiurl).pipe(
             tap(data => console.log(data)),
