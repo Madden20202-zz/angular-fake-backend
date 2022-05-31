@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from './data.service';
-import { User } from './user.data';
 import { UserData } from './user-data.service';
 import { FormGroup, FormControl } from '@angular/forms';
 
@@ -11,7 +10,7 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   title = 'CRUD Practice'
-  users: User[] = []
+  users: UserData[] = []
 
   constructor(private dataservice: DataService){}
 
