@@ -2,6 +2,7 @@
 
 <table class="table">
   <tr *ngFor=" let u of users">
+    <!--Hot fix needed, failure to compile due to lack of value-->
     <td> {{ u.id }} </td>
     <td> {{ u.name }} </td>
     <td> {{ u.email }} </td>
