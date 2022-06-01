@@ -2,7 +2,6 @@ import { Injectable } from "@angular/core";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { Observable, throwError } from "rxjs";
 import { tap, catchError } from 'rxjs/operators';
-import { User } from "./user.data";
 import { UserData } from "./user-data.service";
 
 @Injectable({
@@ -25,7 +24,9 @@ export class DataService {
     // function will handle and log errors
     private handleError(error: any) { 
         console.error(error);
-        return throwError(error);
+        // This is the new way to 
+        // show errors as they come up
+        return throwError(() => new Error(error));
     }
 
     // Data has to be passed the right way
