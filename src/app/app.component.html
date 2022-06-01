@@ -3,12 +3,10 @@
 <table class="table">
   <tr *ngFor=" let u of users">
     <!--Hot fix needed, failure to compile due to lack of value-->
-    <!-- <td> {{ u.id }} </td>
+    <td> {{ u.id }} </td>
     <td> {{ u.name }} </td>
     <td> {{ u.email }} </td>
-    <td> {{ u.contact }} </td> -->
-
-    <td> u </td>
+    <td> {{ u.contact }} </td>
     <!-- <td>
       <button class=" btn btn-info" (click)="updateUser()">UPDATE DATA</button>
     </td> -->
