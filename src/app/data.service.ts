@@ -11,14 +11,18 @@ import { UserData } from "./user-data.service";
 export class DataService {
     
     // tells service where to look
-    apiurl = 'api/users'
-    headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json')
+    apiurl = 'api/user'
+
+    // this is the name and value pairs 
+    // come about so it can be used
+    // more info at https://www.techopedia.com/definition/27178/http-header
+    headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
     httpOptions = {
         headers: this.headers
     };
 
-    // injectable service to communicate 
-    // with the data 
+    // injectable service to 
+    // talk with the data 
     constructor(private http: HttpClient) {}
 
     // function will handle and log errors
