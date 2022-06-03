@@ -10,6 +10,10 @@ import { UserData } from './user-data.service';
 })
 export class AppComponent implements OnInit {
   title = 'CRUD Practice'
+
+  // Ensure that whatever is receiving data 
+  // is set as an @Input and has a 
+  // type, usually any works
   @Input() users: any
 
   constructor(private dataservice: DataService) {}
