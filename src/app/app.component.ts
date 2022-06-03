@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
 import { DataService } from './data.service';
 import { UserData } from './user-data.service';
 
@@ -9,7 +10,7 @@ import { UserData } from './user-data.service';
 })
 export class AppComponent implements OnInit {
   title = 'CRUD Practice'
-  users: UserData[] = []
+  @Input() users: UserData[] = []
 
   constructor(private dataservice: DataService) {}
 
