@@ -10,7 +10,7 @@ import { UserData } from './user-data.service';
 })
 export class AppComponent implements OnInit {
   title = 'CRUD Practice'
-  @Input() users: UserData[] = []
+  @Input() users: any
 
   constructor(private dataservice: DataService) {}
 
