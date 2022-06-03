@@ -11,12 +11,12 @@ import { UserData } from "./user-data.service";
 export class DataService {
     
     // tells service where to look
-    apiurl = 'api/user'
+    apiurl = 'api/users'
 
     // this is the name and value pairs 
     // come about so it can be used
     // more info at https://www.techopedia.com/definition/27178/http-header
-    headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json');
+    headers = new HttpHeaders().set('Content-Type', 'application/json').set('Accept', 'application/json')
     httpOptions = {
         headers: this.headers
     };
