@@ -11,7 +11,7 @@ export class AppComponent implements OnInit {
   title = 'CRUD Practice'
   users: UserData[] = []
 
-  constructor(private dataservice: DataService){}
+  constructor(private dataservice: DataService) {}
 
   ngOnInit() { 
     this.getUsers();
