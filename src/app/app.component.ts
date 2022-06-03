@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { Input } from '@angular/core';
 import { DataService } from './data.service';
 import { UserData } from './user-data.service';
-import { User } from './user.data';
-import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +10,13 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class AppComponent implements OnInit {
   title = 'CRUD Practice'
-  users: UserData[] = []
 
-  constructor(private dataservice: DataService){}
+  // Ensure that whatever is receiving data 
+  // is set as an @Input and has a 
+  // type, usually any works
+  @Input() users: any
+
+  constructor(private dataservice: DataService) {}
 
   ngOnInit() { 
     this.getUsers();
