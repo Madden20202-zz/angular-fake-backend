@@ -11,6 +11,8 @@ import { UserData } from "./user-data.service";
 export class DataService {
     
     // tells service where to look
+    // This is currently not working 
+    // and is giving null values 
     apiurl = 'api/users'
 
     // this is the name and value pairs 
